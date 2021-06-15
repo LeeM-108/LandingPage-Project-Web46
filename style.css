@@ -563,6 +563,7 @@ header .logo:hover {
     }
 }
 
+
 @media (max-width: 1200px) {
     
     .slider .item:before{
@@ -583,7 +584,7 @@ header .logo:hover {
         padding-top: 15px;
         font-size: 1.3rem;
     }
-
+    
     .wave-line {
         top: 40%;
     }
@@ -614,7 +615,7 @@ header .logo:hover {
 }
 
 @media (max-width: 900px) {
-
+    
     .slider .item:before{
         font-size: 7rem;
         letter-spacing: 20px;
@@ -633,7 +634,7 @@ header .logo:hover {
         padding-top: 15px;
         font-size: 1.3rem;
     }
-
+    
     .wave-line {
         top: 44%;
         left: 0;
@@ -683,7 +684,7 @@ header .logo:hover {
         padding-top: 15px;
         font-size: 1.3rem;
     }
-
+    
     .wave-line {
         top: 44%;
         left: 0;
@@ -737,7 +738,7 @@ header .logo:hover {
         padding-top: 15px;
         font-size: 1.2rem;
     }
-
+    
     .wave-line {
         top: 41%;
         left: 0;
@@ -747,7 +748,7 @@ header .logo:hover {
         width: 100%;
         height: 30px;
     }
-
+    
     .btn button{
         font-size: 30px;
         font-weight: 400;
@@ -786,7 +787,7 @@ header .logo:hover {
         padding-top: 15px;
         font-size: 1rem;
     }
-
+    
     .wave-line {
         top: 41%;
         left: 0;
@@ -864,8 +865,8 @@ header .logo:hover {
     .slider .item:before{
         top: 35%;
         left: 50%;
-        font-size: 4rem;
-        letter-spacing: 5px;
+        font-size: 3.1rem;
+        letter-spacing: 3px;
     }
     
     .slider .item img {
@@ -882,7 +883,7 @@ header .logo:hover {
         padding-top: 15px;
         font-size: .9rem;
     }
-
+    
     .wave-line {
         top: 35%;
         left: 0;
@@ -925,3 +926,58 @@ header .logo:hover {
     }
 }
 
+
+@media (max-height: 930px) {
+    
+    
+    .slider .item{
+        height: 110vh;
+    }
+    .slider .item:before{
+        font-size: 8rem;
+        letter-spacing: 35px;
+    }
+    
+    .slider .item img {
+        margin: 170px auto 30px;
+        width: 500px;
+    }
+    
+    .slider h1 {
+        font-size: 60px;
+    }
+    
+    .slider .text p{
+        padding-top: 15px;
+        font-size: 1.3rem;
+    }
+
+    .wave-line {
+        top: 44%;
+        left: 0;
+    }
+    
+    .wave-line .line {
+        width: 100%;
+        height: 80px;
+    }
+    
+    .wave-line .line1{
+        animation: lineOne 3s linear infinite;
+    }
+    
+    .wave-line .line2{
+        animation: lineTwo 4s linear infinite;
+    }
+    
+    .wave-line .line3{
+        animation: lineThree 8s linear infinite;
+    }
+    .btn button{
+        font-size: 33px;
+        font-weight: 500;
+        padding: 20px 25px;
+        bottom: 34px;
+        right: 34px;
+    }
+}
