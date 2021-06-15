@@ -108,45 +108,87 @@ header .logo:hover {
 .menu:before {
     content:"";
     position: absolute;
-    left: -170px;
+    left: -450px;
     top: 48%;
-    width: 200px;
+    width: 400px;
     height: 1px;
     background-color: #000000;
 }
 
+@media  (max-width:1700px) {
+    .menu:before {
+        left: -350px;
+        top: 48%;
+        width: 350px;
+    }
+}
+
+@media  (max-width:1500px) {
+    .menu:before {
+        left: -250px;
+        top: 48%;
+        width: 200px;
+    }
+}
+
+@media  (max-width:1370px) {
+    .menu:before {
+        width: 0px;
+    }
+}
+
 /* Phím tắt mở header */
-.toggle {
-    position: relative;
-    display: inline-block;
-    width: 40px;
-    height: 20px;
-}
-
-.toggle span {
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: rgb(0, 0, 0);
-    right: 0;
-    transition: all ease .5s;
-}
-
-.toggle span:nth-child(2) {
-    top: 9px;
-    width: 60%;
-}
-
-.toggle span:nth-child(3) {
-    top: 18px;
-    width: 30%;
-}
-
-.toggle:hover span{
-    width: 100%;
+.check-btn {
+    font-size: 37px;
+    color: var(--clr-dark-blue);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
     cursor: pointer;
+    display: none;
+    transition: .6s;
 }
 
+.check-btn:hover {
+  text-shadow: -2px -2px var(--clr-red);
+  transition: .6s;
+}
+#check {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .check-btn {
+        display: block;
+    }
+    header ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #ffffff;
+        top: 150px;
+        left: -100%;
+        text-align: center;
+        transition: all 1s;
+        z-index: 5;
+        opacity: 95%;
+    }
+    header ul li{
+        display: block;
+        margin: 100px 0;
+        line-height: 100px;
+    }
+    header ul li a:hover {
+        font-size: 1.2rem;
+    }
+
+    #check:checked ~ ul{
+        left: 0%;
+    } 
+    .check-btn {
+      float: right;
+    }
+}
 /* slider */
 
 .slider {
@@ -244,45 +286,55 @@ header .logo:hover {
     background-size: 20px;
 }
 
-.btn{
-    width: 250px;
-    height: 100px;
-    line-height: 100px;
+/* Explore button */
+.btn button{
     text-align: center;
-    text-decoration: none;
-    font-size: 20px;
+    font-family: var(--ff-content);
+    font-size: 40px;
     font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    background: var(--clr-dark-blue);
-    color:#ffffff;
+    padding: 25px 30px;
+    background: none;
+    border: 3px solid var(--clr-dark-blue);
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 35px;
+    right: 35px;
     z-index: 2;
     transition: all ease .5s;
     overflow: hidden;
 }
-
-.btn:before{
-    content: "";
-    top: -100%;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    z-index: -1;
+.btn button a {
+    color: var(--clr-blue);
+    text-decoration: none;
     transition: all ease .5s;
 }
 
-.btn:hover{
-    color: var(--clr-red);
+.btn button:hover{
+    box-shadow: -5px -5px var(--clr-red), 5px 5px var(--clr-blue);
 }
 
-.btn:hover:before {
-    top: 0;
-    left: 0;
+.btn button a:hover{
+    text-shadow: -3px -3px var(--clr-red);
+    color:rgb(255, 255, 255)
 }
+
+.btn button::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: rgba(5,147,208, .4);
+    z-index: -1;
+    transition:0.8s; 
+    top: 0;
+    border-radius: 0 0 50% 50%;
+}
+
+.btn button:hover::before {
+    height: 190%;
+  }
+
+/* Line chuyển động background */
 
 .wave-line {
     width: 100%;
@@ -332,3 +384,544 @@ header .logo:hover {
         background-position: 150% 0;
     }
 }
+
+@media (max-width: 1700px) {
+    
+    .wave-line .line {
+        width: 100%;
+        height: 100px;
+    }
+    
+    .wave-line .line1{
+        animation: lineOne 5s linear infinite;
+    }
+    
+    .wave-line .line2{
+        animation: lineTwo 10s linear infinite;
+    }
+    
+    .wave-line .line3{
+        animation: lineThree 20s linear infinite;
+    }
+
+}
+
+@media (max-width: 1510px) {
+    header {
+        padding: 20px 100px;
+        width: 100%;
+    }
+    
+    .logo{
+        width: 120px;
+    }
+    
+    header ul li {
+        margin: 0 40px;
+    }
+    
+    header ul li a {
+        font-size: 23px;
+        letter-spacing: 2px;
+    }
+    
+    header ul li a:hover {
+        font-size: 25px;
+    
+    }
+
+    header .logo:hover {
+        width: 123px;
+    }
+    
+    .menu {
+        margin-left: 90px;
+    }
+    
+
+    .slider .item{
+        height: 100vh;
+    }
+    .slider .item:before{
+        font-size: 10rem;
+        letter-spacing: 40px;
+    }
+    
+    .slider .item img {
+        margin: 170px auto 0;
+        width: 530px;
+    }
+    
+    .slider h1 {
+        font-size: 75px;
+    }
+    
+    .slider .text {
+        padding-bottom: 0px;
+    }
+    .slider .text p{
+        padding-top: 17px;
+        font-size: 1.5rem;
+    }
+
+    .wave-line {
+        top: 44%;
+        left: 0;
+    }
+    
+    .wave-line .line {
+        width: 100%;
+        height: 90px;
+    }
+    
+    .wave-line .line1{
+        animation: lineOne 4s linear infinite;
+    }
+    
+    .wave-line .line2{
+        animation: lineTwo 5s linear infinite;
+    }
+    
+    .wave-line .line3{
+        animation: lineThree 10s linear infinite;
+    }
+    .btn button{
+        font-size: 38px;
+        font-weight: 500;
+        padding: 22px 27px;
+        bottom: 32px;
+        right: 32px;
+    }
+
+}
+
+@media (max-width: 1300px) {
+    
+    header ul li {
+        margin: 0 30px;
+    }
+    
+    header ul li a {
+        font-size: 21px;
+        letter-spacing: 2px;
+    }
+    
+    header ul li a:hover {
+        font-size: 23px;
+    
+    }
+    
+    .slider .item{
+        height: 100vh;
+    }
+    .slider .item:before{
+        font-size: 8rem;
+        letter-spacing: 35px;
+    }
+    
+    .slider .item img {
+        margin: 170px auto 30px;
+        width: 500px;
+    }
+    
+    .slider h1 {
+        font-size: 60px;
+    }
+    
+    .slider .text p{
+        padding-top: 15px;
+        font-size: 1.3rem;
+    }
+
+    .wave-line {
+        top: 44%;
+        left: 0;
+    }
+    
+    .wave-line .line {
+        width: 100%;
+        height: 80px;
+    }
+    
+    .wave-line .line1{
+        animation: lineOne 3s linear infinite;
+    }
+    
+    .wave-line .line2{
+        animation: lineTwo 4s linear infinite;
+    }
+    
+    .wave-line .line3{
+        animation: lineThree 8s linear infinite;
+    }
+    .btn button{
+        font-size: 33px;
+        font-weight: 500;
+        padding: 20px 25px;
+        bottom: 34px;
+        right: 34px;
+    }
+}
+
+@media (max-width: 1200px) {
+    
+    .slider .item:before{
+        font-size: 7.5rem;
+        letter-spacing: 32px;
+    }
+    
+    .slider .item img {
+        margin: 150px auto 30px;
+        width: 470px;
+    }
+    
+    .slider h1 {
+        font-size: 58px;
+    }
+    
+    .slider .text p{
+        padding-top: 15px;
+        font-size: 1.3rem;
+    }
+
+    .wave-line {
+        top: 40%;
+    }
+    
+    .wave-line .line {
+        width: 100%;
+        height: 60px;
+    }
+    
+    .wave-line .line1{
+        animation: lineOne 6s linear infinite;
+    }
+    
+    .wave-line .line2{
+        animation: lineTwo 7s linear infinite;
+    }
+    
+    .wave-line .line3{
+        animation: lineThree 12s linear infinite;
+    }
+    .btn button{
+        font-size: 33px;
+        font-weight: 500;
+        padding: 20px 25px;
+        bottom: 34px;
+        right: 34px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .slider .item:before{
+        font-size: 7rem;
+        letter-spacing: 20px;
+    }
+    
+    .slider .item img {
+        margin: 170px auto 30px;
+        width: 450px;
+    }
+    
+    .slider h1 {
+        font-size: 50px;
+    }
+    
+    .slider .text p{
+        padding-top: 15px;
+        font-size: 1.3rem;
+    }
+
+    .wave-line {
+        top: 44%;
+        left: 0;
+    }
+    
+    .wave-line .line {
+        width: 100%;
+        height: 50px;
+    }
+    
+    .wave-line .line1{
+        animation: lineOne 5s linear infinite;
+    }
+    
+    .wave-line .line2{
+        animation: lineTwo 4s linear infinite;
+    }
+    
+    .wave-line .line3{
+        animation: lineThree 8s linear infinite;
+    }
+}
+
+@media (max-width: 900px) {
+    
+    .slider .item{
+        height: 100vh;
+    }
+    .slider .item:before{
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 6rem;
+        letter-spacing: 17px;
+    }
+    
+    .slider .item img {
+        margin: 180px auto 30px;
+        width: 400px;
+    }
+    
+    .slider h1 {
+        font-size: 50px;
+    }
+    
+    .slider .text p{
+        padding-top: 15px;
+        font-size: 1.3rem;
+    }
+
+    .wave-line {
+        top: 44%;
+        left: 0;
+    }
+    
+    .wave-line .line {
+        width: 100%;
+        height: 40px;
+    }
+    
+    .wave-line .line1{
+        animation: lineOne 8s linear infinite;
+    }
+    
+    .wave-line .line2{
+        animation: lineTwo 9s linear infinite;
+    }
+    
+    .wave-line .line3{
+        animation: lineThree 13s linear infinite;
+    }
+    .btn button{
+        font-size: 30px;
+        font-weight: 400;
+        padding: 18px 23px;
+        bottom: 34px;
+        right: 34px;
+    }
+}
+
+@media (max-width: 640px) {
+    
+    .slider .item:before{
+        top: 42%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 5rem;
+        letter-spacing: 13px;
+    }
+    
+    .slider .item img {
+        margin: 180px auto 30px;
+        width: 370px;
+    }
+    
+    .slider h1 {
+        font-size: 50px;
+    }
+    
+    .slider .text p{
+        padding-top: 15px;
+        font-size: 1.2rem;
+    }
+
+    .wave-line {
+        top: 41%;
+        left: 0;
+    }
+    
+    .wave-line .line {
+        width: 100%;
+        height: 30px;
+    }
+
+    .btn button{
+        font-size: 30px;
+        font-weight: 400;
+        padding: 18px 23px;
+        bottom: 37px;
+        right: 37px;
+    }
+}
+
+@media (max-width: 520px) {
+    .check-btn {
+        font-size: 37px;
+        line-height: 50px;
+        margin-right: 10px;
+    }
+    
+    .slider .item:before{
+        top: 42%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 4rem;
+        letter-spacing: 10px;
+    }
+    
+    .slider .item img {
+        margin: 180px auto 30px;
+        width: 340px;
+    }
+    
+    .slider h1 {
+        font-size: 40px;
+        letter-spacing: 1px;
+    }
+    
+    .slider .text p{
+        padding-top: 15px;
+        font-size: 1rem;
+    }
+
+    .wave-line {
+        top: 41%;
+        left: 0;
+    }
+    
+    .wave-line .line {
+        width: 100%;
+        height: 20px;
+    }
+    
+    .wave-line .line1{
+        animation: lineOne 9s linear infinite;
+    }
+    
+    .wave-line .line2{
+        animation: lineTwo 9s linear infinite;
+    }
+    
+    .wave-line .line3{
+        animation: lineThree 13s linear infinite;
+    }
+    .btn button{
+        font-size: 30px;
+        font-weight: 400;
+        padding: 15px 20px;
+        bottom: 40px;
+        right: 40px;
+    }
+    .slider .slick-arrow {
+        position: absolute;
+        top: inherit;
+        bottom: 15px;
+        width: 70px;
+        height: 70px;
+        border: 1px solid #000000;
+        color: #000000;
+        border-radius: 50%;
+        z-index: 9;
+    }
+    
+    .slider .slick-next {
+        right: inherit;
+        left: 120px;
+    }
+    
+    .slider .slick-prev{
+        left: 30px;
+    }
+    .slider .slick-arrow .slick-disabled,
+    .slider .slick-arrow .slick-disabled:before{
+        opacity: .3;
+    }
+    
+    .slider .slick-next:before,
+    .slider .slick-prev:before {
+        background-size: 20px;
+        width: 17px;
+        height: 17px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%)
+    }
+}
+
+@media (max-width: 450px) {
+    header {
+        padding: 20px 50px;
+    }
+    header .logo {
+        width: 100px;
+    }
+    header .logo:hover {
+        width: 105px;
+    }
+    .slider .item:before{
+        top: 35%;
+        left: 50%;
+        font-size: 4rem;
+        letter-spacing: 5px;
+    }
+    
+    .slider .item img {
+        margin: 150px auto 30px;
+        width: 300px;
+    }
+    
+    .slider h1 {
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+    
+    .slider .text p{
+        padding-top: 15px;
+        font-size: .9rem;
+    }
+
+    .wave-line {
+        top: 35%;
+        left: 0;
+    }
+    
+    .wave-line .line {
+        width: 100%;
+        height: 16px;
+    }
+    .btn button{
+        font-size: 25px;
+        font-weight: 400;
+        padding: 12px 15px;
+        bottom: 40px;
+        right: 40px;
+    }
+    .slider .slick-arrow {
+        bottom: 15px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .slider .slick-next {
+        right: inherit;
+        left: 100px;
+    }
+    
+    .slider .slick-prev{
+        left: 30px;
+    }
+    
+    .slider .slick-next:before,
+    .slider .slick-prev:before {
+        background-size: 20px;
+        width: 17px;
+        height: 17px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%)
+    }
+}
+
