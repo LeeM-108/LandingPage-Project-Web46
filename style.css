@@ -934,11 +934,11 @@ header .logo:hover {
 }
 }
 
-@media (max-height: 930px){
+@media (max-height: 800px){
     @media (max-width: 1600px) {
         
         .slider .item{
-            height: 110vh;
+            height: 120vh;
         }
     }
     }
@@ -947,7 +947,7 @@ header .logo:hover {
     @media (max-width: 813px) {
         
         .slider .item{
-            height: 100vh;
+            height: 90vh;
         }
     }
     }
