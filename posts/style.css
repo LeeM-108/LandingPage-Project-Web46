@@ -38,6 +38,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 10;
+    background: #ffffff;
 }
 
 header.left {
@@ -157,12 +158,157 @@ header .logo:hover {
     display: none;
 }
 
+/* Thanh tim kiem */
+
+.search-box {
+  padding: 40px;
+  padding-top: 200px;
+  display: flex;
+  justify-content: center;
+}
+ 
+.search-box select{
+  padding: 20px;
+}
+
+.search-box input{
+  padding: 20px;
+}
+
+.search-box button{
+  padding: 14px 30px; 
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 15px;
+  margin: auto;
+  border-bottom: 4px solid #535252;
+  cursor: pointer;
+  background: #252525;
+  font-family: var(--ff-content);
+  box-shadow: 0px 5px 0 var(--clr-red);
+  padding-top: 17px;
+  padding-bottom: 12px;
+  outline: none;
+  transition: .3s;
+}
+
+.search-box button:active {
+  box-shadow: none;
+  border-bottom: 4px solid var(--clr-blue);
+  color: var(--clr-blue);
+  transform: translateY(5px);
+  transition: .2s;
+
+}
+
+/* repsonsive thanh tim kiem */
+
+@media screen and (max-width: 460px) {
+  .search-box input, .search-box select, .search-box button {
+    min-width: 300px;
+    margin-top: 15px;
+  }
+}
 
 /* main */
 
 .main-container {
-    height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  font-size: 15px;
+  font-family: var(--ff-content);
+  display: flex;
+  transition: all ease .5s;
+  margin-bottom: 50px;
 }
+
+.main-container h1{
+  font-size: 35px;
+  font-family: var(--ff-content);
+  transition: all ease .5s;
+} 
+
+.main-container h2{
+  font-size: 20px;
+  font-family: var(--ff-content);
+  transition: all ease .5s;
+}
+
+.main-container a {
+  text-decoration: none;
+  color: var(--clr-blue);
+  font-weight: 500;
+  transition: all ease .5s;
+}
+
+.main-container a:hover {
+  color: var(--clr-red);
+}
+
+/* Posts */
+
+/* Post head */
+.post-table {
+  width: 80%;
+  margin: 30px auto;
+}
+
+.table-head {
+  display: flex;
+}
+
+.table-head div {
+  padding: 5px;
+  margin: 2px;
+  background-color: #252525;
+  color: #ffffff;
+  font-weight: bold ;
+}
+
+.table-head .status {
+  flex: 5%;
+}
+
+.table-head .subjects {
+  flex: 70%;
+}
+
+.table-head .replies{
+  flex: 10%;
+}
+
+.table-head .last-reply {
+  flex: 15%;
+}
+
+/* Post content */
+
+.table-row {
+  display: flex;
+}
+
+.table-row .status, .table-row .subjects, .table-row .replies, .table-row .last-reply {
+  padding: 5px;
+  margin: 2px;
+  background-color: #e2e2e2;
+}
+.table-row .status {
+  flex: 5%;
+}
+
+.table-row .subjects {
+  flex: 70%;
+}
+
+.table-row .replies{
+  flex: 10%;
+}
+
+.table-row .last-reply {
+  flex: 15%;
+}
+
+
 
 
 
