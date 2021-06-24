@@ -163,16 +163,42 @@ header .logo:hover {
 .search-box {
   padding: 40px;
   padding-top: 200px;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
 }
  
 .search-box select{
   padding: 20px;
+  border-radius: 5px;
+  background-color: #252525;
+  color:#ffffff;
+  font-family: var(--ff-content);
+  cursor: pointer;
+  transition: all ease .5s;
+  outline: none;
+}
+
+.search-box select:hover{
+  box-shadow: -5px -5px var(--clr-blue), 5px 5px var(--clr-red);
+  color:#ffffff;
+  font-family: var(--ff-content);
 }
 
 .search-box input{
   padding: 20px;
+  width: 500px;
+  border-radius: 5px;
+  margin: 30px;
+  font-size: 13px;
+  font-family: var(--ff-content);
+  transition: all ease .5s;
+  border: solid 4px var(--clr-dark-blue);
+}
+
+.search-box input:hover{
+  font-family: var(--ff-content);
+  border: solid 4px var(--clr-red);
 }
 
 .search-box button{
@@ -208,8 +234,21 @@ header .logo:hover {
     min-width: 300px;
     margin-top: 15px;
   }
+  .search-box input{
+    padding: 20px;
+    width: 300px;
+    margin: 0px;
+    margin-top: 10px;
+  }
 }
-
+@media screen and (min-width: 460px) and (max-width: 1024px) {
+  .search-box input{
+    padding: 20px;
+    width: 300px;
+    margin: 0px;
+    margin-top: 10px;
+  }
+}
 /* main */
 
 .main-container {
