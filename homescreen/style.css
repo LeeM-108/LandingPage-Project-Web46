@@ -544,7 +544,7 @@ footer {
     box-sizing: border-box;
     bottom: 0px;
     width: 100%;
-    background: var(--clr-dark-blue);
+    background: black;
   }
   
   .main-content {
@@ -867,22 +867,20 @@ footer {
 }
 
 
-@media (max-width: 1200px) {
-    
-  
+@media (max-width: 800px) {
+  .logo{
+    width: 100px;
+  }
+  .logo:hover {
+    width: 105px;
+  }
 }
 
-@media (max-width: 900px) {
-    
-    
-}
-
-@media (max-width: 900px) {
-    
-    
-}
-
-@media (max-width: 640px) {
-    
-    
+@media (max-width: 600px) {
+  .logo{
+    width: 80px;
+  }
+  .logo:hover {
+    width: 85px;
+  }
 }

@@ -177,7 +177,7 @@ footer {
     box-sizing: border-box;
     bottom: 0px;
     width: 100%;
-    background: var(--clr-dark-blue);
+    background: black;
   }
   
   .main-content {

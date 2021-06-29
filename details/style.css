@@ -48,8 +48,9 @@ header.left {
 }
 
 .logo{
-    width: 130px;
+    width: 100px;
 }
+
 
 header ul li {
     list-style: none;
@@ -158,98 +159,6 @@ header .logo:hover {
     display: none;
 }
 
-/* Thanh tim kiem */
-
-.search-box {
-  padding: 40px;
-  padding-top: 200px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-}
- 
-.search-box select{
-  padding: 20px;
-  border-radius: 5px;
-  background-color: #252525;
-  color:#ffffff;
-  font-family: var(--ff-content);
-  cursor: pointer;
-  transition: all ease .5s;
-  outline: none;
-}
-
-.search-box select:hover{
-  box-shadow: -5px -5px var(--clr-blue), 5px 5px var(--clr-red);
-  color:#ffffff;
-  font-family: var(--ff-content);
-}
-
-.search-box input{
-  padding: 20px;
-  width: 500px;
-  border-radius: 5px;
-  margin: 30px;
-  font-size: 13px;
-  font-family: var(--ff-content);
-  transition: all ease .5s;
-  border: solid 4px var(--clr-dark-blue);
-}
-
-.search-box input:hover{
-  font-family: var(--ff-content);
-  border: solid 4px var(--clr-red);
-}
-
-.search-box button{
-  padding: 14px 30px; 
-  border-radius: 5px;
-  color: #ffffff;
-  font-size: 15px;
-  margin: auto;
-  border-bottom: 4px solid #535252;
-  cursor: pointer;
-  background: #252525;
-  font-family: var(--ff-content);
-  box-shadow: 0px 5px 0 var(--clr-red);
-  padding-top: 17px;
-  padding-bottom: 12px;
-  outline: none;
-  transition: .3s;
-}
-
-.search-box button:active {
-  box-shadow: none;
-  border-bottom: 4px solid var(--clr-blue);
-  color: var(--clr-blue);
-  transform: translateY(5px);
-  transition: .2s;
-
-}
-
-/* repsonsive thanh tim kiem */
-
-@media screen and (max-width: 460px) {
-  .search-box input, .search-box select, .search-box button {
-    min-width: 300px;
-    margin-top: 15px;
-  }
-  .search-box input{
-    padding: 20px;
-    width: 300px;
-    margin: 0px;
-    margin-top: 10px;
-  }
-}
-@media screen and (min-width: 460px) and (max-width: 1024px) {
-  .search-box input{
-    padding: 20px;
-    width: 300px;
-    margin: 0px;
-    margin-top: 10px;
-  }
-}
-
 /* main */
 
 .main-container {
@@ -284,108 +193,11 @@ header .logo:hover {
   color: var(--clr-red);
 }
 
-/* Posts */
-
-/* Post head */
-.post-table {
-  margin: 30px 150px;
-}
-
-.table-head {
-  display: flex;
-}
-
-.table-head div {
-  padding: 10px;
-  margin: 4px;
-  background-color: #252525;
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 10px;
-}
-
-.table-head .status {
-  flex: 7%;
-}
-
-.table-head .subjects {
-  flex: 68%;
-}
-
-.table-head .replies{
-  flex: 10%;
-}
-
-.table-head .last-reply {
-  flex: 15%;
-}
-
-
-/* Post content */
-
-.table-row {
-  display: flex;
-}
-
-.table-row a{
-  font-size: 20px;
-  color: var(--clr-blue);
-  text-shadow: .8px .8px #ffffff;
-}
-
-.table-row .status, .table-row .subjects, .table-row .replies, .table-row .last-reply {
-  padding: 10px;
-  margin: 4px;
-  background-color: #e2e2e2;
-  font-size: 18px;
-  border-radius: 10px;
-  transition: all ease .3s;
-}
-
-.table-row .status {
-  flex: 7%;
-  font-size: 30px;
-  text-align: center; 
-}
-
-.table-row .subjects {
-  flex: 68%;
-}
-
-.table-row .replies{
-  flex: 10%;
-}
-
-.table-row .last-reply {
-  flex: 15%;
-}
-
-
-/* Danh so trang */
-
-.pagination {
-  padding: 20px;
-  font-size: 15px;
-  align-items: center;
-}
-
-.pagination a{
-  color: var(--clr-blue);
-  margin-inline: 5px;
-  padding: 5px 10px;
-  border: solid 0.5px var(--clr-dark-blue);
-  transition: all ease .3s;
-  border-radius: 2px;
-}
-
-.pagination a:hover {
-  background-color: var(--clr-red);
-  color:rgb(255, 255, 255)
-}
-
-
 /* Thanh chỉ dẫn */
+
+.space {
+  padding-top: 200px;
+}
 
 .navigate {
   margin: 0px 150px;
@@ -403,6 +215,420 @@ header .logo:hover {
 
 
 
+/* details */
+
+.topic-container {
+  margin: 20px 150px;
+  transition: all ease .3s;
+}
+
+.head {
+  display: flex;
+  background-color: #252525;
+  border-radius: 7px;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.body {
+  display: flex;
+  background-color:#e2e2e2;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 7px;
+}
+
+.authors {
+  flex: 20%;
+}
+
+.authors div,
+.authors img{
+  margin: 0px 20px;
+}
+
+.content {
+  flex: 80%;
+}
+
+
+.body .authors .username {
+  font-size: 25px;
+}
+
+.body .authors img {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+}
+
+.body .authors hr {
+  display: none;
+}
+
+.body .content .like button,
+.body .content .comment button {
+  border: none;
+  padding: 10px;
+  margin: 20px;
+  cursor: pointer;
+  float: right;
+  background: #000000;
+  color: white;
+  font-family: var(--ff-content);
+  border-radius: 10px;
+  transition: all ease .3s;
+}
+
+.body .content .comment button:hover,
+.body .content .like button:hover
+ {
+  box-shadow: 5px 5px var(--clr-red), -5px -5px var(--clr-blue);
+}
+
+.like .like-number {
+  color: var(--clr-red)
+}
+
+
+/* Comment */
+
+.comment-area {
+  margin-top: 50px;
+  margin: 50px 200px;
+  background-color: #e2e2e2 ;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.comment-area textarea{
+  width: 100%;
+  min-height : 100px;
+  padding: 10px;
+  margin-block: 10px;
+}
+
+.comment-area input {
+  float: right;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  float: right;
+  background: #000000;
+  color: white;
+  font-family: var(--ff-content);
+  border-radius: 10px;
+  transition: all ease .3s;
+}
+
+.comment-area input:hover {
+  box-shadow: 5px 5px var(--clr-red), -5px -5px var(--clr-blue);
+}
+
+.hide {
+  display:none;
+}
+
+/* Comment-detail */
+
+.comments-container {
+  margin: 20px 150px;
+  margin-left: 300px;
+}
+
+
+/* Responsive cho main */
+
+
+@media (max-width: 1400px) {
+
+  /* Thanh chỉ dẫn */
+  .navigate {
+    margin: 0px 150px;
+    padding: 15px;
+    font-size: 20px;
+  }
+
+}
+
+@media (max-width: 1000px) {
+
+  /* Thanh chỉ dẫn */
+  .navigate {
+    margin: 0px 100px;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+    /* details */
+
+  .topic-container {
+    margin: 20px 100px;
+  }
+
+  .head {
+    border-radius: 7px;
+    padding: 5px;
+    font-size: 15px;
+  }
+
+  .body {
+    padding: 10px;
+  }
+
+  .authors div,
+  .authors img{
+    margin: 0px;
+  }
+
+
+  .body .authors .username {
+    font-size: 25px;
+  }
+
+  .body .authors img {
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 50%;
+  }
+
+  .body .content .like button,
+  .body .content .comment button {
+    padding: 10px;
+    margin: 20px;
+  }
+
+  /* Comment */
+
+  .comment-area {
+    margin-top: 30px;
+    margin: 30px 200px;
+    padding: 50px;
+    border-radius: 10px;
+  }
+
+  .comment-area input {
+    float: right;
+    border-radius: 7px;
+  }
+
+
+  /* Comment-detail */
+
+  .comments-container {
+    margin: 20px 100px;
+    margin-left: 200px;
+  }
+
+}
+
+@media (max-width: 800px) {
+
+  /* Thanh chỉ dẫn */
+  .navigate {
+    margin: 0px 50px;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+    /* details */
+
+  .topic-container {
+    margin: 20px 50px;
+  }
+
+  .head {
+    border-radius: 7px;
+    padding: 5px;
+    font-size: 15px;
+  }
+
+  .body {
+    padding: 10px;
+    font-size: 12px;
+  }
+  
+  .body .authors .username {
+    font-size: 20px;
+  }
+
+  .body .authors img {
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 50%;
+  }
+
+  .body .content .like button,
+  .body .content .comment button {
+    padding: 10px;
+    margin: 15px;
+  }
+
+  /* Comment */
+
+  .comment-area {
+    margin-top: 30px;
+    margin: 30px 100px;
+    background-color: #e2e2e2 ;
+    padding: 50px;
+    border-radius: 10px;
+  }
+
+
+  /* Comment-detail */
+
+  .comments-container {
+    margin: 20px 50px;
+    margin-left: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  /* Thanh chỉ dẫn */
+  .navigate {
+    margin: 0px 20px;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+    /* details */
+
+  .topic-container {
+    margin: 20px 20px;
+  }
+
+  .head {
+    border-radius: 7px;
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .body {
+    padding: 10px;
+    font-size: 12px;
+  }
+  
+  .body .authors .username {
+    font-size: 20px;
+  }
+
+  .body .authors img {
+    max-width: 70px;
+    max-height: 70px;
+  }
+
+  .body .content .like button,
+  .body .content .comment button {
+    font-size: 12px;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  /* Comment */
+
+  .comment-area {
+    margin-top: 20px;
+    margin: 30px 70px;
+    padding: 40px;
+  }
+
+
+  /* Comment-detail */
+
+  .comments-container {
+    margin: 20px 20px;
+    margin-left: 70px;
+  }
+}
+
+@media (max-width: 400px) {
+
+  /* Thanh chỉ dẫn */
+  .navigate {
+    margin: 0px 20px;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+    /* details */
+
+  .topic-container {
+    margin: 20px 20px;
+  }
+
+  .head {
+    border-radius: 7px;
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  .body {
+    padding: 10px;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .body .authors .username {
+    font-size: 15px;
+  }
+
+  .body .authors img {
+    max-width: 40px;
+    max-height: 40px;
+  }
+
+  .body .authors hr {
+    display: block;
+  }
+
+  .body .content .like button,
+  .body .content .comment button {
+    font-size: 10px;
+    padding: 5px;
+    margin: 7px;
+  }
+
+  /* Comment */
+
+  .comment-area {
+    margin-top: 20px;
+    margin: 30px 20px;
+    padding: 20px;
+  }
+
+
+  /* Comment-detail */
+
+  .comments-container {
+    margin: 20px 20px;
+    margin-left: 70px;
+  }
+  .comment-area input {
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 10px;
+  }
+
+  .comment-area textarea {
+    font-size: 10px;
+  }
+  
+  .comment-area input:hover {
+    box-shadow: 3px 3px var(--clr-red), -3px -3px var(--clr-blue);
+  }
+}
+
+
+
+
+
+
+
 
 
 /* footer */
@@ -416,7 +642,7 @@ footer {
     box-sizing: border-box;
     bottom: 0px;
     width: 100%;
-    background: var(--clr-dark-blue);
+    background: black;
   }
   
   .main-content {
@@ -757,4 +983,25 @@ footer {
 @media (max-width: 640px) {
     
     
+}
+
+@media (max-width: 800px) {
+  .logo{
+    width: 100px;
+}
+  .logo:hover {
+    width: 105px;
+  }
+  .space {
+    padding-top: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo{
+    width: 80px;
+  }
+  .logo:hover {
+    width: 85px;
+  }
 }
