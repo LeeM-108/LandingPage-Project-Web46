@@ -51,6 +51,55 @@
             </div>
         </div>
 
+        <!-- Up post  -->
+        <div class="post-button">
+            <button onclick="showPost()">Post something</button>
+        </div>
+
+        <div class="post-area" id="post-area">
+            <div class="post-wrapper">
+                <div class="post-title">
+                    <h3>Title:</h3>
+                    <input type="text" placeholder="Title ...">
+                </div>
+
+                <div class="post-description">
+                    <h3>Description:</h3>
+                    <input type="text" placeholder="Description ...">
+                </div>
+
+                <div class="post-space">
+                    <h3>Space:</h3>
+                    <select name="" id="">
+                        <option value="everything">Everything</option>
+                        <option value="space1">Space 1</option>
+                        <option value="space2">Space 2</option>
+                    </select>
+                </div>
+
+                <div class="post-file">
+                    <button>Choose file</button>
+                </div>
+
+                <div class="post-submit">
+                    <input type="submit" name="" id=""  value="submit">
+                    <button class="post-dismiss" onclick="dismissPost()">Dismiss</button>
+                </div>
+
+            </div>    
+        </div>
+
+        <script>
+            function showPost() {
+            var postArea = document.getElementById("post-area");
+            postArea.setAttribute('style', "display: block;");
+            }
+            function dismissPost() {
+            var postArea = document.getElementById("post-area");
+            postArea.setAttribute('style', "display: none;");
+            }
+        </script>
+
         <main>
             <div class="main-container">
                 <div class="list-container">
